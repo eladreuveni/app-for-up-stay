@@ -1,23 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import MasterMenu from './MasterMenu';
+
+const menuJson = [
+  {
+    title: 'Home',
+    sub: [{
+      title: 'a',
+      sub: [
+        { title: 'aa' },
+        { title: 'bb' },
+        {
+          title: 'cc',
+          sub: [{ title: 'aaa' }]
+        }]
+    },
+    { title: 'b', sub: [{ title: 'bb2' }] }]
+  },
+  { title: 'menu1' },
+  { title: 'menu2', sub: [{ title: 'a' }] },
+]
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MasterMenu menuJson={menuJson} />
     </div>
   );
 }

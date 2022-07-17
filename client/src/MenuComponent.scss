@@ -1,0 +1,18 @@
+.menu-item {
+    .sub-menu {
+        position: relative;
+        float: right;
+        .menu-item {
+            background:#ddd;
+            width: 100%;
+                
+            &:hover {
+                background: #f6f6f6;
+            }
+
+            .menu-title {
+                padding: 0 15px;
+            }
+        }
+    }
+}
